@@ -13,7 +13,9 @@
       ]
     }
   },
+  "postCreateCommand": "git lfs install && python3 --version && go version && (command -v bootdev && bootdev --version || true)",
   "remoteUser": "vscode",
+  "updateRemoteUserUID": true,
   "containerEnv": {
     "PATH": "/home/vscode/.local/bin:/home/vscode/go/bin:${containerEnv:PATH}"
   }
