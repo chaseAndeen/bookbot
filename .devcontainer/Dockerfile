@@ -21,9 +21,9 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list /etc/apt/sources.list.d/yarn.list.sa
 USER vscode
 
 ENV HOME=/home/vscode
-ENV PATH="${HOME}/.local/bin:${HOME}/go/bin:${PATH}"
+ENV PATH="${HOME}/.local/bin:${HOME}/go/bin:/bin:/usr/bin:/usr/sbin:/sbin:${PATH}"
 ENV GOBIN="${HOME}/go/bin"
 
 RUN mkdir -p "${HOME}/.local/bin" "${HOME}/go/bin" \
-    && curl -sS https://webi.sh/golang | sh \
+    && PATH="/bin:/usr/bin:/usr/sbin:/sbin:${PATH}" curl -sS https://webi.sh/golang | sh \
     && /bin/bash -lc 'go install github.com/bootdotdev/bootdev@latest'
