@@ -14,6 +14,7 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list /etc/apt/sources.list.d/yarn.list.sa
         git \
         git-lfs \
         gh \
+        golang-go \
         python3-venv \
         wget \
     && rm -rf /var/lib/apt/lists/*
