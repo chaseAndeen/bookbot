@@ -1,0 +1,20 @@
+{
+  "name": "bookbot",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "golang.go"
+      ]
+    }
+  },
+  "remoteUser": "vscode",
+  "containerEnv": {
+    "PATH": "/home/vscode/.local/bin:/home/vscode/go/bin:${containerEnv:PATH}"
+  }
+}
