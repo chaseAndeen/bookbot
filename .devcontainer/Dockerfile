@@ -9,6 +9,7 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list /etc/apt/sources.list.d/yarn.list.sa
     && apt-get install -y --no-install-recommends \
         build-essential \
         ca-certificates \
+        coreutils \
         curl \
         git \
         git-lfs \
